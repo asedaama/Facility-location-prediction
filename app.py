@@ -25,8 +25,14 @@ from sklearn.cluster import KMeans
 import warnings
 warnings.filterwarnings('ignore')
 
-st.title("Finding Optimal Location Using Kmeans")
-st.subheader("By Nana Antwi")
+with open("custom.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+st.title("Finding Optimal Location")
+st.markdown("Using linear Programming and KMeans Clustering to find the optimal location")
+st.subheader("By Yaw Antwi")
+
+st.title("Using KMeans Clustering")
 
 st.write("The data")
 df= pd.read_csv('C://Users//antwi//OneDrive//Desktop//TARGET.csv',encoding='latin-1')
